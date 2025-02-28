@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sensor Data Monitoring</title>
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js"></script>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <!-- Sensor Data Display -->
+
+  <div class="Header">
+    <h1>Quaesitor</h1>
+    <p>Real-Time data Monitoring System</p>
+  </div>
+
+  <div class="data-container">
+    <div class="item-container">
+      <p class="item">Humidity</p>
+      <p class="value" id="humidity"> %</p>
+    </div>
+
+    <div class="item-container">
+      <p class="item">Temperature</p>
+      <p class="value" id="temperature"> &deg;C</p>
+    </div>
+
+    <div class="item-container">
+      <p class="item">UV Intensity</p>
+      <p class="value" id="uv-int"> µW/cm²</p>
+    </div>
+
+    <div class="item-container">
+      <p class="item">CO<sub>2</sub> Level</p>
+      <p class="value" id="co2-lev"> ppm</p>
+    </div>
+
+    <div class="item-container">
+      <p class="item">Dust Particles</p>
+      <p class="value" id="dust"> µg/m³</p>
+    </div>
+
+    <div class="item-container">
+      <p class="item">AQI</p>
+      <p class="value" id="aqi"></p>
+    </div>
+  </div>
+
+
+
+  <!-- Real-time clock -->
+  <div id="clock" class="clock">
+    <p>Time : </p>
+  </div>
+
+  <!-- Firebase Connection -->
+  <script type="module" src="firebase.js">
+  </script>
+</body>
+
+</html>
